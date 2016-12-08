@@ -11,29 +11,28 @@
     <!-- SPELLS -->
     <!-- load angular and angular route via CDN -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular-animate.js"></script>
-    <script src="script.js"></script>
+    <script src="app.js"></script>
 </head>
-<body ng-controller="mainController">
-    <header>
-        <nav class="navbar navbar-default">
-            <div class="container">
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="/">Ejemplo de enrutamiento con Angular</a>
-                </div>
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#"><i class="fa fa-home"></i>Home</a></li>
-                    <li><a href="#about"><i class="fa fa-shield"></i>About</a></li>
-                    <li><a href="#contact"><i class="fa fa-comment"></i>Contact</a></li>
-                </ul>
-            </div>
+<body>
+   <div class="container">
+       <nav class="navbar navbar-inverse" role="navigation">
+        <div class="navbar-header">
+            <a class="navbar-brand" ui-sref="#">AngularUI Routing</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li><a ng-click="myVar='page-home'" ui-sref="home">Home</a></li>
+            <li><a ng-click="myVar='page-about'" ui-sref="about">About</a></li>
+            <li><a ng-click="myVar='page-contact'" ui-sref="contact">Contact</a></li>
+        </ul>
         </nav>
-    </header>
-    <div id="main">
-        <!-- angular templating -->
-        <!-- el contenido vendrá inyectado aquí -->
-        <div class="page {{ pageClass }}" ng-view></div>
-    </div>
+
+        <div id="main">
+            <!-- angular templating -->
+            <!-- el contenido vendrá inyectado aquí -->
+            <div ng-class="myVar" ui-view></div>
+        </div>
+   </div>     
 </body>
 </html>

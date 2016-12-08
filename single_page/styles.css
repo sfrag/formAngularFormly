@@ -10,9 +10,9 @@
 .page h1 { font-size: 60px; }
 .page a { margin-top: 50px; }
 
-.page-home { background:#00D0BC; color:#00907c; }
-.page-about { background: #E59400; color:#a55400; }
-.page-contact { background: #ffa6bb; color:#9e0000; }
+.page-home-bg { background:#00D0BC; color:#00907c; }
+.page-about-bg { background: #E59400; color:#a55400; }
+.page-contact-bg { background: #ffa6bb; color:#9e0000; }
 
 /* ANIMATIONS */
 
